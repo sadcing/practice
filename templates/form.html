@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Surat Kelahiran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: auto;
+            padding: 2rem;
+            background: #f9f9f9;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 1rem;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+        }
+        button {
+            margin-top: 2rem;
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Form Surat Keterangan Lahir</h2>
+    <form method="POST" action="/generate" enctype="multipart/form-data">
+        <label>Nama Istri:</label>
+        <input type="text" name="nama_istri" required>
+
+        <label>Pekerjaan Istri:</label>
+        <input type="text" name="pekerjaan_istri" required>
+
+        <label>Alamat Istri:</label>
+        <input type="text" name="alamat_istri" required>
+
+        <label>Nama Suami:</label>
+        <input type="text" name="nama_suami" required>
+
+        <label>Pekerjaan Suami:</label>
+        <input type="text" name="pekerjaan_suami" required>
+
+        <label>Alamat Suami:</label>
+        <input type="text" name="alamat_suami" required>
+
+        <label>Tanggal Akta:</label>
+<input type="date" name="tanggal_akta" required>
+
+        <!-- Tambahan untuk Registration Number -->
+<label for="nomor_regist">Nomor Registrasi:</label>
+<input type="text" name="nomor_regist" required><br>
+
+<label for="kode_regist">Kode Bulan (contoh: M):</label>
+<input type="text" name="kode_regist" required><br>
+
+<label for="tahun_regist">Tahun Registrasi:</label>
+<input type="text" name="tahun_regist" required><br>
+
+        <label>Hari Lahir:</label>
+<select name="hari" required>
+    <option value="Senin">Senin</option>
+    <option value="Selasa">Selasa</option>
+    <option value="Rabu">Rabu</option>
+    <option value="Kamis">Kamis</option>
+    <option value="Jumat">Jumat</option>
+    <option value="Sabtu">Sabtu</option>
+    <option value="Minggu">Minggu</option>
+</select>
+
+        <label>Tanggal Lahir:</label>
+        <input type="date" name="tanggal_lahir" required>
+
+        <label>Jam Lahir:</label>
+        <input type="text" name="jam_lahir" required>
+
+        <label>Jenis Kelamin Bayi:</label>
+        <select name="kelamin" required>
+            <option value="laki-laki">Laki-laki</option>
+            <option value="perempuan">Perempuan</option>
+        </select>
+
+        <label>Berat Badan (gram):</label>
+        <input type="text" name="berat_badan" required>
+
+        <label>Panjang Badan (cm):</label>
+        <input type="text" name="panjang_badan" required>
+
+        <label>Nama Bayi:</label>
+        <input type="text" name="baby_name" required>
+
+        <label>Nama Saksi:</label>
+        <input type="text" name="witness" required>
+
+        <label>Upload Tanda Tangan:</label>
+<input type="file" name="ttd" accept="image/*" required>
+
+        <button type="submit">Download Surat</button>
+    </form>
+</body>
+</html>
